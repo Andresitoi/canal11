@@ -26,14 +26,13 @@ Podría llamarlo CMS, pero es muy pequeño, con el menor contenido posible para 
 - Gerente de traducciones
 - otros ayudantes para iniciar rápidamente su nueva área de administración (Biblioteca de medios, Lista de administradores, etc.)
 
+
+
 - [Requerimientos](#Requerimientos-para-la-ejecución-de-este-proyecto)
 - [Instalaciones](#Instalaciones)
   - [Instalación Laravel](#Instación-Laravel)
   - [Instalación Craftable](#Instación-Craftable)
   - [Ejecución](#Ejecución)
-
-
-
 
 
 # Requerimientos para la ejecución de este proyecto #
@@ -49,8 +48,46 @@ requerimientos de Craftable:
 Craftable uses Laravel so you should check out its requirements too. It is compatible with Laravel 8:
 - https://laravel.com/docs/8.x/installation#server-requirements
 
-# Instalaciones #
+Craftable es un conjunto de herramientas de código abierto basado en Laravel para crear interfaces de administración. Se envía con un potente generador CRUD para acelerar el desarrollo de su CMS, CRM u otro sistema de back-office.
+- https://getcraftable.com/
+# Instalación de este proyecto #
 
+## Para descargar ##
+```bash
+git clone https://github.com/Andresitoi/canal11.git
+```
+
+## Descargar los paquetes de composer.json ##
+```bash
+composer update
+```
+
+## Instalar los paquetes de packages.json ##
+```bash
+npm install
+npm run dev
+```
+## Genera la key del proyecto ##
+```bash
+php artisan key:generate
+```
+## Copiar el el archivo `.env.example` y pegar como `.env` ##
+### Crear la base datos en mysql y editar la siguiente línea en `.env` ###
+```
+DB_DATABASE=bd_canal11
+```
+## Genera la key del proyecto ##
+```bash
+php artisan migrate
+```
+
+## Ejecuta tu proyecto ##
+```bash
+php artisan serve
+```
+
+
+# Si aun no tienes instalado laravel #
 ## Instalación Laravel ##
 
 ### Nuevo proyecto laravel 8.0 ###
@@ -72,7 +109,7 @@ composer update
 ```
 
 
-## Instalación Craftable ##
+## Instalación Craftable(si aún no tiene instalado) ##
 
 ### Nuevo proyecto Craftable 7.0 ###
 
@@ -102,8 +139,4 @@ npm install --save-dev laravel-mix@latest
 Instala npm:
 ```bash
 npm install && npm run dev
-```
-## Ejecuta tu proyecto ##
-```bash
-php artisan serve
 ```
